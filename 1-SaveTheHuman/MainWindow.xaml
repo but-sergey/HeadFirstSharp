@@ -8,7 +8,23 @@
         Title="Save the Humans" Height="800" Width="1200">
     <Window.Resources>
         <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
-            <Ellipse Height="100" Width="100" Fill="Red"/>
+            <Grid>
+                <Ellipse Fill="Gray" Stroke="Black" Height="100" Width="75"/>
+                <Ellipse Fill="Black" Stroke="Black" Height="35" Width="25"
+                         HorizontalAlignment="Center" VerticalAlignment="Top"
+                         Margin="40,20,70,0" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <SkewTransform AngleX="10"/>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse Fill="Black" Stroke="Black" Height="35" Width="25"
+                         HorizontalAlignment="Center" VerticalAlignment="Top"
+                         Margin="70,20,40,0" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <SkewTransform AngleX="-10"/>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+            </Grid>
         </ControlTemplate>
     </Window.Resources>
     <Grid>
@@ -25,7 +41,7 @@
         <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Click="startButton_Click"/>
         <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" Height="20"/>
         <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Avoid These" TextWrapping="Wrap" FontSize="16"/>
+            <TextBlock Text="Avoid These" TextWrapping="Wrap" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <ContentControl Template="{DynamicResource EnemyTemplate}" Content="ContentControl" VerticalAlignment="Center"/>
         </StackPanel>
         <Canvas x:Name="playArea" Grid.Row="1" Grid.ColumnSpan="3" MouseMove="playArea_MouseMove" MouseLeave="playArea_MouseLeave">
