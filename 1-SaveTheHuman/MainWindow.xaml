@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_1_SaveTheHuman"
         mc:Ignorable="d"
-        Title="Save the Humans" Height="450" Width="800">
+        Title="Save the Humans" Height="800" Width="1200">
     <Window.Resources>
         <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
             <Ellipse Height="100" Width="100" Fill="Red"/>
@@ -23,7 +23,7 @@
             <RowDefinition Height="160"/>
         </Grid.RowDefinitions>
         <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Click="startButton_Click"/>
-        <ProgressBar Grid.Column="1" Grid.Row="2" Height="20"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" Height="20"/>
         <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Avoid These" TextWrapping="Wrap" FontSize="16"/>
             <ContentControl Template="{DynamicResource EnemyTemplate}" Content="ContentControl" VerticalAlignment="Center"/>
