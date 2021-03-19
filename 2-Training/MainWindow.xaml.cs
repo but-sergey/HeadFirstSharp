@@ -27,7 +27,14 @@ namespace _2_Training
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            // это комментарий
+            string name = "Quentin";
+            int x = 3;
+            x = x * 17;
+            double d = Math.PI / 2;
+            myLabel.Text = "name is " + name
+                + "\nx is " + x
+                + "\nd is " + d;
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
