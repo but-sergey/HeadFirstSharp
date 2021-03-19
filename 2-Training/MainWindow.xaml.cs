@@ -52,7 +52,13 @@ namespace _2_Training
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-
+            int someValue = 4;
+            string name = "Bobbo Jr.";
+            if((someValue ==3) && (name == "Joe"))
+            {
+                myLabel.Text = "x is 3 and the name is Joe";
+            }
+            myLabel.Text = "this line runs no matter what";
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
