@@ -63,7 +63,19 @@ namespace _2_Training
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
+            int count = 0;
+            
+            while (count < 10)
+            {
+                count = count + 1;
+            }
 
+            for (int i = 0; i < 5; i++)
+            {
+                count = count - 1;
+            }
+
+            myLabel.Text = "The answer is " + count;
         }
     }
 }
